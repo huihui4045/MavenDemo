@@ -15,6 +15,49 @@ public class SortUtils {
 
     }
 
+    /**
+     * @param a
+     * @param left  左边下标
+     * @param right 右边下标
+     */
+    public static void QuickSort(int[] a, int left, int right) {
+
+        if (a == null || a.length == 0 || left > right)
+            return;
+
+        int i, j, temp;
+
+        i = left;
+        j = right;
+
+        temp = a[left];
+
+        while (i != j) {
+
+
+            while (a[j] >= temp && i < j) j--;
+
+            while (a[i] <= temp && i < j) i++;
+
+            if (i < j) {
+
+
+                swap(a, i, j);
+            }
+
+        }
+
+        a[left] = a[i];
+
+        a[i] = temp;
+
+        QuickSort(a, left, i - 1);
+
+        QuickSort(a, i + 1, right);
+
+
+    }
+
 
     /**
      * 冒泡排序
@@ -33,7 +76,7 @@ public class SortUtils {
 
                 if (a[j] > a[j + 1]) {
 
-                    swap(a, j);
+                    swap(a, j, j + 1);
 
                 }
             }
@@ -41,11 +84,18 @@ public class SortUtils {
 
     }
 
-    private static void swap(int[] a, int j) {
+    /**
+     * 交互两个元素的位置
+     *
+     * @param a
+     * @param m
+     * @param n
+     */
+    private static void swap(int[] a, int m, int n) {
         int temp;
-        temp = a[j];
-        a[j] = a[j + 1];
-        a[j + 1] = temp;
+        temp = a[m];
+        a[m] = a[n];
+        a[n] = temp;
     }
 
     /**
