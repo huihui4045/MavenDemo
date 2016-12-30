@@ -16,6 +16,7 @@ public class SortUtils {
     }
 
     /**
+     * 快速排序
      * @param a
      * @param left  左边下标
      * @param right 右边下标
