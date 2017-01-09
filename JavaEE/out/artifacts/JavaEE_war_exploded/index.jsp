@@ -12,5 +12,13 @@
   </head>
   <body>
   $END$
+
+  <%
+
+    application.setAttribute("userName","吕鹏");
+
+    application.removeAttribute("userName");
+
+  %>
   </body>
 </html>
