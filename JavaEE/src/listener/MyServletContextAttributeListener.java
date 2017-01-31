@@ -16,10 +16,13 @@ import javax.servlet.http.HttpSessionBindingEvent;
 public class MyServletContextAttributeListener implements ServletContextAttributeListener{
 
 
+
     @Override
     public void attributeAdded(ServletContextAttributeEvent scae) {
 
         String name = scae.getName();
+
+
 
         Object value = scae.getValue();
 
