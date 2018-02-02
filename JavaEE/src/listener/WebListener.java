@@ -13,7 +13,7 @@ public class WebListener implements ServletContextListener{
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
-        System.out.printf("Web应用启动");
+        System.out.printf("Web应用启动======");
     }
 
     @Override

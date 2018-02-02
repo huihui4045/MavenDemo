@@ -1,3 +1,5 @@
+package bean;
+
 import javax.servlet.AsyncContext;
 import javax.servlet.ServletRequest;
 import java.util.ArrayList;

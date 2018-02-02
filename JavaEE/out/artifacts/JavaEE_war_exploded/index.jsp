@@ -11,7 +11,7 @@
     <title>SSSSSSS</title>
   </head>
   <body>
-  $END$
+  nihao
 
   <%
 
